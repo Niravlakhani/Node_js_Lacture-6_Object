@@ -37,7 +37,7 @@ let person_const = Object.freeze({
 
 // console.log(person_const.first_name);
 
-const db = Object.freeze({
+const db = Object({
     host : "localhost",
     username : "root",
     password : 123
@@ -45,8 +45,23 @@ const db = Object.freeze({
 
 // db.freeze = "Nayan"; freeze New Value Reasign nthi krva detu
 
-console.log(db.host);
-console.log(Object.keys(db));
-console.log(Object.values(db));
-console.log(db.hasOwnProperty('host'));
+// console.log(db.host);
+// console.log(Object.keys(db));
+// console.log(Object.values(db));
+// console.log(db.hasOwnProperty('host'));
 
+// Object assign property
+
+Object.assign(db,{
+    db_name: "test",
+    db_connection: 10
+});
+
+console.log(db);
+
+// Object create 3 Method
+
+const test = Object.create({});
+
+test.abc ="Nirav";
+console.log(test);
